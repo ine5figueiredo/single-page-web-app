@@ -4,9 +4,11 @@ define(function(){
     var externals = {};
 
     internals.routes = {
-        main: {hash: '#main', controller: 'main-controller'},
         list: { hash: '#list', controller: 'list-controller' },
-        //character: { hash: '#character', controller: 'character' }
+        gryffindor: {hash: '#gryffindor', controller: 'house-controller'},
+        hufflepuff: {hash: '#hufflepuff', controller: 'house-controller'},
+        ravenclaw: {hash: '#ravenclaw', controller: 'house-controller'},
+        slytherin: {hash: '#slytherin', controller: 'house-controller'}
     }
 
     internals.defaultRoute = internals.routes.list;
@@ -18,6 +20,7 @@ define(function(){
     }
 
     internals.getRoute = function() {
+        console.log(window.location.hash);
         return Object.values(internals.routes).find(function(route) {
             return route.hash === window.location.hash
         })
@@ -25,38 +28,32 @@ define(function(){
 
     externals.init = function() {
 
-         $(window).scroll(function() {
-            console.log("controller")
-
-        internals.initController(internals.getRoute() || internals.defaultRoute);
+        $('#gryffindor').click(() => window.location.hash = 'gryffindor')
+        $('#hufflepuff').click(() => window.location.hash = 'hufflepuff')
+        $('#ravenclaw').click(() => window.location.hash = 'ravenclaw')
+        $('#slytherin').click(() => window.location.hash = 'slytherin')
 
         window.onhashchange = function() {
 
+            console.log("changed!!!!")
+
             try{
-                internals.initController(internals.getRoute());
+                internals.initController(internals.getRoute() || internals.defaultRoute);
 
             } catch(error){
                 window.location.hash = internals.defaultRoute;
-                
             }
         }
-            
-   })
 
-        /*console.log("controller")
+        
+        $(window).scroll(function() {
 
-        internals.initController(internals.getRoute() || internals.defaultRoute);
-
-        window.onhashchange = function() {
-
-            try{
-                internals.initController(internals.getRoute());
-
-            } catch(error){
-                window.location.hash = internals.defaultRoute;
-                
-            }
-        }*/
+            require(['controller/list-controller'], function(controller){
+                controller.init();
+            })
+            //internals.initController(internals.getRoute() || internals.defaultRoute);
+        
+       })
     }
 
     return externals;

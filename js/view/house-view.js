@@ -2,18 +2,17 @@ define(function() {
 
     var externals = {};
 
-    externals.show = function(response) {
+    externals.show = function(response) {        
 
         var div = document.getElementById('box');
-
-        var scroll = document.getElementById('scroll');
         
+        var scroll = document.getElementById('scroll');
+
         if (scroll) {
             scroll.remove();
         }
 
         response.then((data) => {
-            
             div.innerHTML = "";
             for (var key in data) {
 
@@ -23,7 +22,7 @@ define(function() {
             + "<h5 class='card-title'>" + data[key].name + "</h5>"
             + "<p class='card-text'>Hot dam!</p>"
             + "<a href='#' class='btn btn-primary'>Go somewhere</a>"
-            + "</div></div>" 
+            + "</div></div>"   
         }
         })
     }

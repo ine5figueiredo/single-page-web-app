@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!--Routing-->
-    <script data-main="js/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script
+      data-main="js/main"
+      src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      defer
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     <!--Bootstrap link-->
@@ -19,24 +25,41 @@
     />
 
     <!--CSS-->
-    <link href="style.css" rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap"
+      rel="stylesheet"
+    />
     <title>Harry Potter</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="body">
-    <div id="navigation">Harry Potter's Characters World</div>
-    <div id="search">
-        <p id="text">Look up for your favorite character</p>
-        <input id="input" type="text">
-    </div>
-    <div id="container">
-        <div id="scroll">
-            ^<br>Scroll to see all Harry Potter's main characters
+      <div id="navigation">
+        <div>Harry Potter's Characters World</div>
+        <div>
+          <img id="gryffindor" src="./resources/gryffindor.png" />
+          <img id="hufflepuff" src="./resources/huflepuff.png" />
+          <img id="ravenclaw" src="./resources/ravenclaw.png" />
+          <img id="slytherin" src="./resources/slytherin.png" />
         </div>
-        <div id="characters"></div>
+      </div>
+      <div id="search">
+        <input
+          id="input"
+          type="text"
+          placeholder="Look for your favorite character!"
+        />
+      </div>
+      <div id="box">
+        <p id="scroll">
+          ^<br />Scroll to see all Harry Potter's main characters
+        </p>
+      </div>
     </div>
-    </div>
-</body>
+  </body>
 </html>

@@ -17,6 +17,10 @@ body {
   border-radius: 20px 20px 0px 0px;
 }
 
+#gryffindor {
+    cursor: pointer;
+}
+
 #search {
     position: sticky;
     top: 2px;
@@ -25,13 +29,28 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 10px;
+    color: #982c2c;
+    font-size: large;
 }
 
 #input {
   height: 5vh;
   width: 70%;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: large;
+  text-align: center;
+}
+
+#box {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #scroll {
@@ -39,20 +58,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: #E6DECD;
-}
-
-#container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-#characters {
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    top: 0;
 }
 
 .card {

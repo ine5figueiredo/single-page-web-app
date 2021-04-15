@@ -1,10 +1,8 @@
-define(['view/main-view',], function(view) {
+define(['view/house-view', 'service/house-service'], function(view, service) {
     
     var externals = {};
     
     externals.init = function() {
-
-
         
         var result = service.list().then(parseResponse);
 
@@ -12,7 +10,7 @@ define(['view/main-view',], function(view) {
             return response.json();
         }
         
-        view.show();
+        view.show(result);
     }
     return externals;
 })
