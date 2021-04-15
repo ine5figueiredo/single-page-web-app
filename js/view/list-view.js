@@ -1,4 +1,4 @@
-define(function() {
+define(['controller/list-controller'], function(controller) {
 
     var externals = {};
 
@@ -6,7 +6,7 @@ define(function() {
 
         console.log(response);
 
-        var div = document.getElementById('container');
+        var div = document.getElementById('characters');
 
         response.then((data) => {
 

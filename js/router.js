@@ -4,6 +4,7 @@ define(function(){
     var externals = {};
 
     internals.routes = {
+        main: {hash: '#main', controller: 'main-controller'},
         list: { hash: '#list', controller: 'list-controller' },
         //character: { hash: '#character', controller: 'character' }
     }
@@ -23,7 +24,9 @@ define(function(){
     }
 
     externals.init = function() {
-        console.log("controller")
+
+         $(window).scroll(function() {
+            console.log("controller")
 
         internals.initController(internals.getRoute() || internals.defaultRoute);
 
@@ -37,6 +40,23 @@ define(function(){
                 
             }
         }
+            
+   })
+
+        /*console.log("controller")
+
+        internals.initController(internals.getRoute() || internals.defaultRoute);
+
+        window.onhashchange = function() {
+
+            try{
+                internals.initController(internals.getRoute());
+
+            } catch(error){
+                window.location.hash = internals.defaultRoute;
+                
+            }
+        }*/
     }
 
     return externals;

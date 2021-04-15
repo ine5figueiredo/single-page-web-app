@@ -3,6 +3,7 @@ define(function() {
     var internals = {};
     var externals = {};
 
+
     internals.getList = function() {
 
         var api = 'http://hp-api.herokuapp.com/api/characters';

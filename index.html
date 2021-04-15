@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--CSS-->
-    <link href="style.css" rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
-
+    
     <!--Routing-->
     <script data-main="js/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -21,13 +17,26 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
+
+    <!--CSS-->
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <title>Harry Potter</title>
 </head>
 <body>
-    <div id="navigation">Harry Potter's Characters
-        <br>
+    <div id="body">
+    <div id="navigation">Harry Potter's Characters World</div>
+    <div id="search">
+        <p id="text">Look up for your favorite character</p>
         <input id="input" type="text">
     </div>
-    <div id="container"></div>
+    <div id="container">
+        <div id="scroll">
+            ^<br>Scroll to see all Harry Potter's main characters
+        </div>
+        <div id="characters"></div>
+    </div>
+    </div>
 </body>
 </html>
