@@ -1,2 +1,2 @@
-# single-page-web-app
-A web page with a single page. Theme: Harry Potter!
+# Single page web app!
+A web app with a single page. Theme: Harry Potter!
